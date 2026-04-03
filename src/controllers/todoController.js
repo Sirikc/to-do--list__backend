@@ -1,4 +1,4 @@
-import { sequelize, Task } from "../db/db.js";
+import { Task } from "../db/db.js";
 
 export async function getTasks(req, res) {
   const tasks = await Task.findAll();
