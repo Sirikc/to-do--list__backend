@@ -1,5 +1,4 @@
 import { Sequelize, DataTypes } from "sequelize";
-import 'dotenv/config';
 
 let sequelize;
 if (process.env.NODE_ENV === "production") {
