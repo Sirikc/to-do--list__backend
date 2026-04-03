@@ -27,7 +27,7 @@ to-do--list__backend/
 
 ```
 NODE_ENV=(design / production)
-POSTGRES_URL=postgres://USER:PASSWORD@db:PORT/to-do--list
+DATABASE_URL=postgres://USER:PASSWORD@db:PORT/to-do--list
 POSTGRES_DB=to-do--list
 POSTGRES_USER=
 POSTGRES_PASSWORD=
