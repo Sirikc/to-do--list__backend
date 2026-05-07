@@ -1,20 +1,15 @@
-import { sequelize } from "./src/db/db.js";
+import { sequelize } from "./src/config/database.js";
 import todosRouter from "./src/routes/todosRouter.js";
-import express from "express"
-import 'dotenv/config';
+import app from "./src/app.js";
 
 try {
-  await sequelize.authenticate();
-  await sequelize.sync();
-  console.log("Connection has been established successfully.");
+	await sequelize.authenticate();
+	await sequelize.sync();
+	console.log("Connection has been established successfully.");
 } catch (error) {
-  console.error("Unable to connect to the database:", error);
+	console.error("Unable to connect to the database:", error);
 }
 
-const app = express();
-app.use(express.json());
-app.use("/api", todosRouter);
-
 app.listen(5000, () => {
-  console.log("Server listening on port 5000");
+	console.log("Server listening on port 5000");
 });
