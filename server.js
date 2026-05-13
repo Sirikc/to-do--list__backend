@@ -1,4 +1,4 @@
-import { sequelize } from "./src/config/database.js";
+import sequelize from "./src/config/database.js";
 import todosRouter from "./src/routes/todosRouter.js";
 import app from "./src/app.js";
 

@@ -1,6 +1,7 @@
-import sequelize from "../config/database.js" 
+import sequelize from "../config/database.js";
+import { DataTypes } from "sequelize";
 
-export default const Task = sequelize.define(
+const Task = sequelize.define(
 	"Task",
 	{
 		id: {
@@ -32,3 +33,4 @@ export default const Task = sequelize.define(
 	},
 );
 
+export default Task;

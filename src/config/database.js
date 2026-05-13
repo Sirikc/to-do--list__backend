@@ -11,4 +11,4 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-export default { sequelize };
+export default sequelize;
